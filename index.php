@@ -1,4 +1,5 @@
 <?php
+ob_start();
 session_start();
 if (!empty($_SESSION['active'])) {
     header('location: src/');
@@ -38,6 +39,7 @@ if (!empty($_SESSION['active'])) {
         }
     }
 }
+ob_end_flush();
 ?>
 <!DOCTYPE html>
 <html lang="en">
